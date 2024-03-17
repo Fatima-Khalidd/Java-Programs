@@ -1,18 +1,23 @@
 public class Main
 {
 
-public static void main(String args[])
 
+public static void main (String agrs[])
 {
 
-Point p1=new Point(2,4);
-Rectangle r1=new Rectangle(p1,2,4);
-Rectangle r2=new Rectangle(p1,3,4);
+Human h1=new Human();
 
-System.out.println(r1);
-System.out.println(p1);
+h1.setName("Fatima Khalid");
+h1.setAge(19);
+h1.setCountry("Pakistan");
 
-int result=r1.isSmall(r2);
+String name=h1.getName();
+int age= h1.getAge();
+String country=h1.getCountry();
+
+h1.display();
+h1.test();
+
 }
-
+  
 }
