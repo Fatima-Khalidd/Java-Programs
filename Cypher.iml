@@ -1,0 +1,36 @@
+public class CaesarCipher {
+
+
+    public static String encrypt(String message, int shift) {
+        StringBuilder encryptedMessage = new StringBuilder();
+
+        for (int i=0;i< message.length();i++) {
+        char c=message.chatAt(i);
+            if (Character.isLetter(c)) {
+
+                encryptedMessage.append((char) ((c - 'a' + shift) % 26 + 'a'));
+            } else {
+                encryptedMessage.append(c);
+            }
+        }
+
+        return encryptedMessage.toString();
+    }
+
+
+    public static void main(String[] args) {
+        String originalText = "Salam!";
+        Scanner sc=new Scanner(System.in);
+        System.iut.println("Enter message to be encrypted");
+        String message=sc.NextLine();
+         System.iut.println("Enter how places you want to shift");
+                int shift=sc.NextInt();
+
+
+
+        String encryptedMessage = encrypt(message, shift);
+        System.out.println("Encrypted Message: " + encryptedMessage);
+
+
+    }
+}
